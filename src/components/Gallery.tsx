@@ -1,0 +1,95 @@
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ExternalLink, ArrowRight } from 'lucide-react';
+import bathroomImage from '@/assets/bathroom-modern.jpg';
+import kitchenImage from '@/assets/kitchen-modern.jpg';
+import livingRoomImage from '@/assets/living-room-modern.jpg';
+import exteriorImage from '@/assets/exterior-landscaping.jpg';
+
+const Gallery = () => {
+  const projects = [
+    {
+      title: 'Modern Bathroom Renovation',
+      image: bathroomImage,
+      category: 'Bathroom Remodel',
+      description: 'Complete luxury bathroom renovation featuring marble countertops, walk-in shower, and contemporary fixtures.',
+    },
+    {
+      title: 'Contemporary Kitchen Design',
+      image: kitchenImage,
+      category: 'Kitchen Renovation',
+      description: 'Stunning kitchen transformation with custom cabinetry, quartz countertops, and premium appliances.',
+    },
+    {
+      title: 'Elegant Living Space',
+      image: livingRoomImage,
+      category: 'Interior Design',
+      description: 'Modern living room redesign focusing on comfort, functionality, and sophisticated aesthetics.',
+    },
+    {
+      title: 'Exterior & Landscaping',
+      image: exteriorImage,
+      category: 'Landscaping',
+      description: 'Professional landscaping and exterior improvements creating beautiful curb appeal.',
+    },
+  ];
+
+  return (
+    <section id="gallery" className="py-20 bg-muted/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Our <span className="text-primary">Recent Work</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Take a look at some of our recent projects and see the quality craftsmanship 
+            that sets us apart in the construction industry.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {projects.map((project, index) => (
+            <Card key={index} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-500">
+              <div className="relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-gold text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {project.category}
+                  </span>
+                </div>
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Button variant="secondary" size="sm" className="bg-white/90 hover:bg-white">
+                    <ExternalLink className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+              
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {project.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button variant="hero" size="lg" className="group">
+            View Full Portfolio
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Gallery;

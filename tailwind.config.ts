@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom construction theme colors
+        navy: {
+          deep: "hsl(var(--navy-deep))",
+          light: "hsl(var(--navy-light))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold-accent))",
+          light: "hsl(var(--gold-light))",
+        },
+        warm: {
+          gray: "hsl(var(--warm-gray))",
+          "gray-light": "hsl(var(--warm-gray-light))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
