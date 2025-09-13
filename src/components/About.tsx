@@ -37,14 +37,14 @@ const About = () => {
           {/* Content */}
           <div>
             <h2 className="text-4xl font-bold text-foreground mb-6">
-              Why Choose <span className="text-primary">Elite Construction</span>?
+              Why Choose <span className="text-primary">Familia Construction</span>?
             </h2>
             
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              With over 15 years of experience in the construction industry, we've built our reputation
-              on delivering exceptional results and outstanding customer service. Our team of skilled
-              professionals is dedicated to bringing your vision to life.
-            </p>
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            With over 15 years of experience as a family-owned construction business, we've built our reputation
+            on personal service, honest work, and treating every project like it's our own home. From grandfather 
+            to grandchildren, construction and care for our community runs in our family.
+          </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
               {features.map((feature, index) => (
@@ -74,7 +74,7 @@ const About = () => {
                 <div className="space-y-4">
                   {values.map((value, index) => (
                     <div key={index} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-red mr-3 flex-shrink-0" />
                       <span className="text-muted-foreground">{value}</span>
                     </div>
                   ))}

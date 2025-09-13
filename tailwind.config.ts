@@ -58,13 +58,14 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // Custom construction theme colors
-        navy: {
-          deep: "hsl(var(--navy-deep))",
-          light: "hsl(var(--navy-light))",
+        black: {
+          deep: "hsl(var(--black-deep))",
+          medium: "hsl(var(--black-medium))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold-accent))",
-          light: "hsl(var(--gold-light))",
+        red: {
+          DEFAULT: "hsl(var(--red-primary))",
+          dark: "hsl(var(--red-dark))",
+          light: "hsl(var(--red-light))",
         },
         warm: {
           gray: "hsl(var(--warm-gray))",

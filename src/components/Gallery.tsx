@@ -1,36 +1,36 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, ArrowRight } from 'lucide-react';
-import bathroomImage from '@/assets/bathroom-modern.jpg';
-import kitchenImage from '@/assets/kitchen-modern.jpg';
-import livingRoomImage from '@/assets/living-room-modern.jpg';
-import exteriorImage from '@/assets/exterior-landscaping.jpg';
+import bathroomImage from '@/assets/bathroom-family.jpg';
+import kitchenImage from '@/assets/kitchen-family.jpg';
+import livingRoomImage from '@/assets/living-family.jpg';
+import exteriorImage from '@/assets/exterior-family.jpg';
 
 const Gallery = () => {
   const projects = [
     {
-      title: 'Modern Bathroom Renovation',
+      title: 'Family Bathroom Renovation',
       image: bathroomImage,
       category: 'Bathroom Remodel',
-      description: 'Complete luxury bathroom renovation featuring marble countertops, walk-in shower, and contemporary fixtures.',
+      description: 'Warm, family-friendly bathroom renovation with quality materials and careful attention to detail.',
     },
     {
-      title: 'Contemporary Kitchen Design',
+      title: 'Cozy Kitchen Design',
       image: kitchenImage,
       category: 'Kitchen Renovation',
-      description: 'Stunning kitchen transformation with custom cabinetry, quartz countertops, and premium appliances.',
+      description: 'Beautiful kitchen transformation creating a warm gathering space for family meals and memories.',
     },
     {
-      title: 'Elegant Living Space',
+      title: 'Welcoming Living Space',
       image: livingRoomImage,
       category: 'Interior Design',
-      description: 'Modern living room redesign focusing on comfort, functionality, and sophisticated aesthetics.',
+      description: 'Comfortable living room designed for family time, combining functionality with personal touches.',
     },
     {
-      title: 'Exterior & Landscaping',
+      title: 'Family Home & Garden',
       image: exteriorImage,
       category: 'Landscaping',
-      description: 'Professional landscaping and exterior improvements creating beautiful curb appeal.',
+      description: 'Personal landscaping and exterior care creating a beautiful, welcoming home for the family.',
     },
   ];
 
@@ -42,8 +42,8 @@ const Gallery = () => {
             Our <span className="text-primary">Recent Work</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Take a look at some of our recent projects and see the quality craftsmanship 
-            that sets us apart in the construction industry.
+            Take a look at some of our recent family projects and see the personal care and craftsmanship 
+             that makes our small business special in the community.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const Gallery = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 left-4">
-                  <span className="bg-gold text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-red text-white px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}
                   </span>
                 </div>

@@ -15,7 +15,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'info@eliteconstruction.com',
+      details: 'info@familiaconstruction.com',
       description: 'We respond within 24 hours',
     },
     {

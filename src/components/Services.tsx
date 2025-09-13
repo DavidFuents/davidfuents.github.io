@@ -50,8 +50,8 @@ const Services = () => {
             Our <span className="text-primary">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From concept to completion, we provide comprehensive construction and home improvement services
-            tailored to your needs and budget.
+            From concept to completion, our family provides comprehensive construction and home improvement services
+            with personal attention and care that only a family business can offer.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ const Services = () => {
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-2 h-2 bg-gold rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-red rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}

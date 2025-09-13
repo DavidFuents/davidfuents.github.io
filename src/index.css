@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 30% 15%;
 
-    --primary: 215 85% 25%;
+    --primary: 0 85% 50%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 210 15% 92%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 15% 95%;
     --muted-foreground: 215 15% 45%;
 
-    --accent: 35 85% 55%;
+    --accent: 0 85% 50%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -37,21 +37,22 @@ All colors MUST be HSL.
     --ring: 215 85% 25%;
 
     /* Custom construction company design tokens */
-    --navy-deep: 215 85% 25%;
-    --navy-light: 215 50% 35%;
-    --gold-accent: 35 85% 55%;
-    --gold-light: 35 70% 65%;
-    --warm-gray: 30 5% 20%;
-    --warm-gray-light: 30 5% 85%;
+    --black-deep: 0 0% 8%;
+    --black-medium: 0 0% 15%;
+    --red-primary: 0 85% 50%;
+    --red-dark: 0 85% 40%;
+    --red-light: 0 70% 60%;
+    --warm-gray: 0 0% 25%;
+    --warm-gray-light: 0 0% 85%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-deep)), hsl(var(--navy-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--gold-accent)), hsl(var(--gold-light)));
-    --gradient-overlay: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--black-deep)), hsl(var(--black-medium)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--red-primary)), hsl(var(--red-dark)));
+    --gradient-overlay: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.8));
     
     /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--navy-deep) / 0.2);
-    --shadow-card: 0 4px 20px -4px hsl(var(--navy-deep) / 0.1);
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--red-primary) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--black-deep) / 0.15);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
