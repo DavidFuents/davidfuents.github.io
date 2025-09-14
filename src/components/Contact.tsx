@@ -9,13 +9,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '(555) 123-4567',
+      details: '(347) 901-2860',
       description: 'Mon-Fri 7AM-6PM, Sat 8AM-4PM',
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'info@familiaconstruction.com',
+      details: 'info@hernandezdesignbuild.com',
       description: 'We respond within 24 hours',
     },
     {
@@ -137,7 +137,7 @@ const Contact = () => {
                       Send Message
                     </Button>
                     <Button variant="outline" size="lg" className="flex-1">
-                      Call Now: (555) 123-4567
+                      Call Now: (347) 901-2860
                     </Button>
                   </div>
                 </form>

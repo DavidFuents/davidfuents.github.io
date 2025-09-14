@@ -18,8 +18,9 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">Familia Construction</h1>
+          <div className="flex-shrink-0 flex flex-col items-start">
+            <div className="text-4xl font-bold text-primary italic">H</div>
+            <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider -mt-2">design & build</div>
           </div>
 
           {/* Desktop Navigation */}
@@ -39,7 +40,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="h-4 w-4" />
-              <span>(555) 123-4567</span>
+              <span>(347) 901-2860</span>
             </div>
             <Button variant="hero" size="sm">
               Get Quote
@@ -72,7 +73,7 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4 border-t">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4" />
-                  <span>(555) 123-4567</span>
+                  <span>(347) 901-2860</span>
                 </div>
                 <Button variant="hero" size="sm" className="w-fit">
                   Get Quote
