@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -21,14 +22,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Include CNAME
-        run: mkdir -p dist && cp public/CNAME dist/CNAME
-
       - name: Build project
         run: npm run build
+
+      # ✅ Copy CNAME after build
+      - name: Include CNAME
+        run: cp public/CNAME dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # ensures push permission
+          publish_dir: ./dist                       # the folder to deploy
+
+      
