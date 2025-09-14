@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Include CNAME
+        run: cp public/CNAME dist/CNAME
+
       - name: Build project
         run: npm run build
 
