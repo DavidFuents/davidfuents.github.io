@@ -4,7 +4,7 @@ import path from "path";
 
 // Replace <repo-name> with your GitHub repo name
 export default defineConfig({
-  base: 'hdb',
+  base: '/hdbnyc/',
   server: {
     host: "::",
     port: 8080,
