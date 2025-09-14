@@ -37,7 +37,7 @@ const About = () => {
           {/* Content */}
           <div>
             <h2 className="text-4xl font-bold text-foreground mb-6">
-              Why Choose <span className="text-primary">Familia Construction</span>?
+              Why Choose <span className="text-primary">Us</span>?
             </h2>
             
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">

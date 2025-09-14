@@ -33,7 +33,7 @@ const Hero = () => {
               Get Free Quote
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-navy-deep">
+            <Button variant="outline" size="lg" className="border-white text-black bg-white hover:bg-gray-100 hover:text-black">
               View Our Work
             </Button>
           </div>

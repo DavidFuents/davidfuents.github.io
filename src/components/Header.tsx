@@ -18,8 +18,8 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex flex-col items-start">
-            <div className="text-4xl font-bold text-primary italic">H</div>
+          <div className="flex-shrink-0 flex flex-col items-center">
+            <div className="text-6xl font-bold text-primary italic" style={{ fontFamily: 'cursive' }}>H</div>
             <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider -mt-2">design & build</div>
           </div>
 
