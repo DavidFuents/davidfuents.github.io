@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Include CNAME
-        run: cp public/CNAME dist/CNAME
+        run: mkdir -p dist && cp public/CNAME dist/CNAME
 
       - name: Build project
         run: npm run build

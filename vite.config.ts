@@ -2,9 +2,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// Replace <repo-name> with your GitHub repo name
 export default defineConfig({
   base: '/hdbnyc/',
+  build: {
+    outDir: 'dist',   
+  },
   server: {
     host: "::",
     port: 8080,
