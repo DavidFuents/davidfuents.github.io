@@ -58,9 +58,11 @@ const About = () => {
               ))}
             </div>
 
-            <Button variant="hero" size="lg">
-              Schedule Consultation
-            </Button>
+            <div className="text-center">
+              <Button variant="hero" size="lg">
+                Schedule Consultation
+              </Button>
+            </div>
           </div>
 
           {/* Values Card */}
