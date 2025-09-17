@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import hLogo from '@/assets/h-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,9 +19,12 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex flex-col items-center">
-            <div className="text-6xl font-bold text-primary italic" style={{ fontFamily: 'cursive' }}>H</div>
-            <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider -mt-2">design & build</div>
+          <div className="flex-shrink-0">
+            <img 
+              src={hLogo} 
+              alt="H Design & Build Logo" 
+              className="h-16 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -42,8 +46,10 @@ const Header = () => {
               <Phone className="h-4 w-4" />
               <span>(347) 901-2860</span>
             </div>
-            <Button variant="hero" size="sm">
-              Get Quote
+            <Button variant="hero" size="sm" asChild>
+              <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
+                Get Quote
+              </a>
             </Button>
           </div>
 
@@ -75,8 +81,10 @@ const Header = () => {
                   <Phone className="h-4 w-4" />
                   <span>(347) 901-2860</span>
                 </div>
-                <Button variant="hero" size="sm" className="w-fit">
-                  Get Quote
+                <Button variant="hero" size="sm" className="w-fit" asChild>
+                  <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
+                    Get Quote
+                  </a>
                 </Button>
               </div>
             </nav>
