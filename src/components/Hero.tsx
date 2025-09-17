@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, Users, Clock } from 'lucide-react';
+import { ArrowRight, Hammer, Award, Users, Clock, MapPin } from 'lucide-react';
 import heroImage from '@/assets/hero-hernandez-construction.jpg';
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Transform Your Home Into Your 
@@ -42,17 +42,10 @@ const Hero = () => {
           <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20">
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
-                <Award className="h-6 w-6 text-gold" />
+                <Hammer className="h-6 w-6 text-gold" />
               </div>
-              <div className="text-2xl font-bold text-white">15+</div>
-              <div className="text-gray-300 text-sm">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <Users className="h-6 w-6 text-gold" />
-              </div>
-              <div className="text-2xl font-bold text-white">500+</div>
-              <div className="text-gray-300 text-sm">Happy Clients</div>
+              <div className="text-2xl font-bold text-white">Quality</div>
+              <div className="text-gray-300 text-sm">Craftsmanship</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
@@ -60,6 +53,13 @@ const Hero = () => {
               </div>
               <div className="text-2xl font-bold text-white">24/7</div>
               <div className="text-gray-300 text-sm">Support</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <MapPin className="h-6 w-6 text-gold" />
+              </div>
+              <div className="text-2xl font-bold text-white">NYC</div>
+              <div className="text-gray-300 text-sm">Based</div>
             </div>
           </div>
         </div>
