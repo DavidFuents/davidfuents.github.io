@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Hammer, Award, Users, Clock, MapPin } from 'lucide-react';
+import { ArrowRight, Hammer, Users, Clock, MapPin } from 'lucide-react';
 import heroImage from '@/assets/hero-hernandez-construction.jpg';
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-16">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Transform Your Home Into Your 
@@ -29,9 +29,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="hero" size="lg" className="group">
-              Get Free Quote
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="hero" size="lg" className="group" asChild>
+              <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
+                Get Free Quote
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="border-white text-black bg-white hover:bg-gray-100 hover:text-black">
               View Our Work

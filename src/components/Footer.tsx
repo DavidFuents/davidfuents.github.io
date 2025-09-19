@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Hernandez Design & Build</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Family-owned construction business serving our community with pride for over 15 years. 
+              Family-owned construction business serving our community with pride. 
               Personal service, honest work, and treating every home like our own.
             </p>
             <div className="flex space-x-4">

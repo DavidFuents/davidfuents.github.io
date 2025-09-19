@@ -82,9 +82,11 @@ const Gallery = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg" className="group">
-            View Full Portfolio
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <Button variant="hero" size="lg" className="group" asChild>
+            <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
+              View Full Portfolio
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>

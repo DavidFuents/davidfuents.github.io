@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Home, Wrench, TreePine, Palette, Hammer, Sparkles } from 'lucide-react';
+import { Home, Wrench, TreePine, Hammer, Sparkles } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -71,8 +71,10 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Button variant="hero" size="lg">
-            Request a Free Consultation
+          <Button variant="hero" size="lg" asChild>
+            <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
+              Request a Free Consultation
+            </a>
           </Button>
         </div>
       </div>

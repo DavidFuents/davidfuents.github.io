@@ -41,9 +41,9 @@ const About = () => {
             </h2>
             
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            With over 15 years of experience as a family-owned construction business, we've built our reputation
-            on personal service, honest work, and treating every project like it's our own home. From grandfather 
-            to grandchildren, construction and care for our community runs in our family.
+            As a family-owned construction business, we've built our reputation
+            on personal service, honest work, and treating every project like it's our own home. Quality craftsmanship 
+            and dedication to our community are values that define everything we do.
           </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
@@ -59,8 +59,10 @@ const About = () => {
             </div>
 
             <div className="text-center">
-              <Button variant="hero" size="lg">
-                Schedule Consultation
+              <Button variant="hero" size="lg" asChild>
+                <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
+                  Schedule Consultation
+                </a>
               </Button>
             </div>
           </div>
