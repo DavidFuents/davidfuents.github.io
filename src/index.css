@@ -9,19 +9,19 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 98%;
-    --foreground: 215 30% 15%;
+    --foreground: 215 85% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 30% 15%;
+    --card-foreground: 215 85% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 30% 15%;
+    --popover-foreground: 215 85% 15%;
 
     --primary: 215 85% 25%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 45 85% 55%;
-    --secondary-foreground: 215 30% 15%;
+    --secondary-foreground: 215 85% 15%;
 
     --muted: 210 15% 95%;
     --muted-foreground: 215 15% 45%;
@@ -39,6 +39,9 @@ All colors MUST be HSL.
     /* Custom construction company design tokens */
     --navy-deep: 215 85% 15%;
     --navy-medium: 215 70% 25%;
+    --blue-light: 210 25% 97%;
+    --blue-accent: 210 30% 94%;
+    --blue-soft: 210 20% 96%;
     --gold-primary: 45 85% 55%;
     --gold-dark: 45 85% 45%;
     --gold-light: 45 70% 65%;

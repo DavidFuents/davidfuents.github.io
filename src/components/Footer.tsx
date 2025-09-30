@@ -9,10 +9,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Company Info - takes up 2 columns */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Hernandez Design & Build</h3>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              Family-owned construction business serving our community with pride. 
-              Personal service, honest work, and treating every home like our own.
+            <h3 className="text-3xl font-bold mb-4">
+              <span className="text-white">Hernandez</span>{' '}
+              <span className="text-gold">Design & Build</span>
+            </h3>
+            <p className="text-white mb-4 leading-relaxed">
+              Transform your home into your 
+              <span className="text-gold font-semibold"> dream space</span> with 
+              <span className="text-white"> quality craftsmanship</span> and personal care. 
+              We are a family-owned construction business serving our community and bringing your vision to life.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-gold transition-colors">
@@ -31,10 +36,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-gold transition-colors">Kitchen Renovations</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gold transition-colors">Bathroom Renovations</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gold transition-colors">Landscaping</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gold transition-colors">Custom Carpentry</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-gold transition-colors">Home Improvement</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-gold transition-colors">Handyman Services</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-gold transition-colors">Custom Carpentry</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-gold transition-colors">Kitchen & Bathroom</a></li>
             </ul>
           </div>
 
@@ -50,16 +55,20 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="-ml-8">
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-3 text-gold" />
-                <span className="text-gray-300">(347) 901-2860</span>
+                <a href="tel:(929) 732-4979" className="text-gray-300 hover:text-gold transition-colors">
+                  (929) 732-4979
+                </a>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-3 text-gold" />
-                <span className="text-gray-300">mauricio.hdb@gmail.com</span>
+                <a href="mailto:mauricio.hdb@gmail.com" className="text-gray-300 hover:text-gold transition-colors">
+                  mauricio.hdb@gmail.com
+                </a>
               </div>
             </div>
           </div>
