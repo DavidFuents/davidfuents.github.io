@@ -11,8 +11,8 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 pt-24 md:pt-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl ml-0 lg:ml-64">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-end">
+          <div className="w-full max-w-4xl ml-20 lg:ml-40">
           {/* Main Heading */}
           <div className="mb-12 animate-fade-in">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-[1.1] tracking-tight">
@@ -29,22 +29,17 @@ const Hero = () => {
               <span className="text-white"> quality craftsmanship</span> and personal care. 
               We are a family-owned construction business serving our community and bringing your vision to life.
             </p>
-            
           </div>
 
           {/* Call to Action */}
-          <div className="mb-16 animate-fade-in" style={{animationDelay: "600ms"}}>
-            <div className="flex flex-col sm:flex-row items-center gap-6">
-              <Button variant="hero" size="lg" className="group text-lg px-8 py-4" asChild>
-                <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
-                  Get Free Quote
-                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <p className="text-xl text-gold font-semibold animate-fade-in" style={{animationDelay: "800ms"}}>
-                ¡Hablamos Español!
-              </p>
-            </div>
+          <div className="mb-16 animate-fade-in flex flex-col sm:flex-row items-start sm:items-center gap-6" style={{animationDelay: "600ms"}}>
+            <Button variant="hero" size="lg" className="group text-lg px-8 py-4" asChild>
+              <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
+                Get Free Quote
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            <p className="text-lg text-gold font-medium">¡Hablamos Español!</p>
           </div>
 
           {/* Stats */}

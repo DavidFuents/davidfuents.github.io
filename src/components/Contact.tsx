@@ -39,7 +39,18 @@ const Contact = () => {
               Ready to start your next project? Contact us today for a free consultation 
               and detailed estimate. We're here to help bring your vision to life.
             </p>
-            <p className="text-xl text-gold font-medium mt-4 animate-fade-in [animation-delay:400ms]">¡Hablamos Español!</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 animate-fade-in [animation-delay:400ms]">
+              <a href="tel:(929) 732-4979" className="text-lg font-medium text-primary hover:text-gold transition-colors flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                (929) 732-4979
+              </a>
+              <span className="hidden sm:inline text-muted-foreground">|</span>
+              <a href="mailto:mauricio.hdbnyc@gmail.com" className="text-lg font-medium text-primary hover:text-gold transition-colors flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                mauricio.hdbnyc@gmail.com
+              </a>
+            </div>
+            <p className="text-xl text-gold font-medium mt-4 animate-fade-in [animation-delay:600ms]">¡Hablamos Español!</p>
           </div>
         </div>
 
@@ -52,7 +63,19 @@ const Contact = () => {
                 <div className="flex items-center justify-center w-20 h-20 bg-primary rounded-full mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg relative z-10">
                   <info.icon className="h-10 w-10 text-gold group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2 text-lg">{info.title}</h3>
+                <h3 className="font-semibold text-foreground mb-2 text-lg">
+                  {info.title === 'Email Us' ? (
+                    <a href={`mailto:${info.details}`} className="hover:underline">
+                      {info.title}
+                    </a>
+                  ) : info.title === 'Call Us' ? (
+                    <a href={`tel:${info.details}`} className="hover:underline">
+                      {info.title}
+                    </a>
+                  ) : (
+                    info.title
+                  )}
+                </h3>
                 <p className="text-base font-medium text-gold mb-2 break-all text-center leading-tight">
                   {info.title === 'Email Us' ? (
                     <a href={`mailto:${info.details}`} className="hover:underline">
