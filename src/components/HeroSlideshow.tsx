@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import heroImage from '@/assets/hero-hernandez-construction.jpg';
 import bathroomFamily from '@/assets/bathroom-family.jpg';
@@ -42,7 +43,7 @@ const HeroSlideshow = () => {
         <img 
           src={slides[currentSlide].image} 
           alt={slides[currentSlide].alt}
-          className="w-full h-full object-cover scale-x-[-1]"
+          className="w-full h-full object-cover object-center scale-x-[-1]"
         />
       </div>
       
@@ -55,31 +56,11 @@ const HeroSlideshow = () => {
         <img 
           src={slides[nextSlide].image} 
           alt={slides[nextSlide].alt}
-          className="w-full h-full object-cover scale-x-[-1]"
+          className="w-full h-full object-cover object-center scale-x-[-1]"
         />
       </div>
       
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 to-navy-deep/70"></div>
-      
-      {/* Slide indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-gold w-6' : 'bg-white/50'
-            }`}
-            onClick={() => {
-              setNextSlide(index);
-              setIsTransitioning(true);
-              setTimeout(() => {
-                setCurrentSlide(index);
-                setIsTransitioning(false);
-              }, 4000);
-            }}
-          />
-        ))}
-      </div>
     </div>
   );
 };

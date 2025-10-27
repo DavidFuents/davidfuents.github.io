@@ -1,54 +1,118 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-import hLogo from '@/assets/hdb-logo-latest.png';
+import { Menu, X, Phone, Mail, ArrowRight, ChevronDown } from 'lucide-react';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+import hLogo from '@/assets/hdb-logo-new.png';
+import hLogoTablet from '@/assets/hdb-logo-tablet.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
   ];
 
+  const serviceItems = [
+    { label: 'Home Improvement', href: '#services' },
+    { label: 'Handyman Services', href: '#services' },
+    { label: 'Cleaning & Junk Removal', href: '#services' },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if scrolled past hero section (approximately)
+      setIsScrolled(window.scrollY > window.innerHeight * 0.7);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Desktop Header */}
-        <div className="hidden md:grid items-center h-20 gap-4" style={{gridTemplateColumns: "0.6fr auto 1.4fr"}}>
+        <div className="hidden md:flex items-center md:h-auto lg:h-20 md:py-1 lg:py-0 justify-between relative">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src={hLogo} 
               alt="Hernandez Design & Build Logo" 
-              className="h-20 w-auto"
+              className="h-20 hidden lg:block w-auto"
+            />
+            <img 
+              src={hLogoTablet} 
+              alt="Hernandez Design & Build Logo" 
+              className="h-16 md:block lg:hidden w-auto"
             />
           </div>
 
-          {/* Desktop Navigation - Shifted Right */}
-          <nav className="flex items-center justify-center space-x-8 ml-60">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-navy-deep hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.label}
-              </a>
-            ))}
+          {/* Desktop Navigation - Absolutely Centered */}
+          <nav className="absolute left-1/2 -translate-x-1/2 flex items-center">
+            <a
+              href="#home"
+              className="text-sm md:text-base text-primary hover:text-gold transition-colors duration-300 font-medium mr-4"
+            >
+              Home
+            </a>
+            
+            {/* Services Dropdown */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm md:text-base text-primary hover:text-gold transition-colors duration-300 font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white border border-border shadow-lg rounded-lg p-4 min-w-[250px]">
+                    <ul className="space-y-2">
+                      {serviceItems.map((service) => (
+                        <li key={service.label}>
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={service.href}
+                              className="block px-4 py-2 text-base text-primary hover:text-gold hover:bg-muted rounded-md transition-colors"
+                            >
+                              {service.label}
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            
+            <a
+              href="#about"
+              className="text-sm md:text-base text-primary hover:text-gold transition-colors duration-300 font-medium ml-3 mr-5"
+            >
+              About
+            </a>
+            <a
+              href="#contact"
+              className="text-sm md:text-base text-primary hover:text-gold transition-colors duration-300 font-medium ml-2"
+            >
+              Contact
+            </a>
           </nav>
 
           {/* Contact Info & CTA */}
-          <div className="flex items-center justify-end space-x-8">
-            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <Phone className="h-4 w-4" />
-              <a href="tel:(929) 732-4979" className="hover:underline">(929) 732-4979</a>
-            </div>
-            <Button variant="hero" size="sm" asChild>
+          <div className="flex md:flex-col lg:flex-row items-center justify-end md:space-y-1 lg:space-y-0 md:space-x-0 lg:space-x-3">
+            <Button variant="hero" size="lg" className="group text-sm md:text-base px-5 md:px-6 py-2.5 md:py-3 w-full sm:w-auto" asChild>
               <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
-                Get Quote
+                Get Free Quote
+                <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
           </div>
@@ -67,32 +131,66 @@ const Header = () => {
             className="ml-auto p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-6 w-6 text-primary" /> : <Menu className="h-6 w-6 text-primary" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4 border-t border-primary/20 bg-background/95">
             <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-navy-deep hover:text-primary transition-colors duration-200 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t">
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <Phone className="h-4 w-4" />
+              <a
+                href="#home"
+                className="text-lg text-primary hover:text-gold transition-colors duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </a>
+              
+              {/* Mobile Services Dropdown */}
+              <details className="group">
+                <summary className="text-lg text-primary hover:text-gold transition-colors duration-300 font-medium cursor-pointer list-none flex items-center">
+                  Services
+                  <ChevronDown className="ml-2 h-4 w-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-2 ml-4 space-y-2">
+                  {serviceItems.map((service) => (
+                    <a
+                      key={service.label}
+                      href={service.href}
+                      className="block text-base text-primary hover:text-gold transition-colors duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.label}
+                    </a>
+                  ))}
+                </div>
+              </details>
+              
+              <a
+                href="#about"
+                className="text-lg text-primary hover:text-gold transition-colors duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#contact"
+                className="text-lg text-primary hover:text-gold transition-colors duration-300 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </a>
+              
+              <div className="flex flex-col space-y-2 pt-4 border-t border-primary/20">
+                <div className="flex items-center space-x-2 text-base text-primary">
+                  <Phone className="h-5 w-5" />
                   <a href="tel:(929) 732-4979" className="hover:underline">(929) 732-4979</a>
                 </div>
-                <Button variant="hero" size="sm" className="w-fit" asChild>
+                <Button variant="hero" size="lg" className="w-fit text-lg px-8 py-4 group" asChild>
                   <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
-                    Get Quote
+                    Get Free Quote
+                    <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
               </div>
