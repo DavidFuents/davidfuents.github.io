@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Users, Clock, MapPin } from 'lucide-react';
 import hLogo from '@/assets/h-logo-white.png';
 import HeroSlideshow from './HeroSlideshow';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -14,15 +15,15 @@ const Hero = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center md:justify-end">
           <div className="w-full max-w-4xl ml-0 md:ml-20 lg:ml-64">
           {/* Main Heading */}
-          <div className="mt-4 mb-3 md:mb-4">
-            <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-3 leading-[1.1] tracking-tight">
+          <div className="mt-4 mb-4 md:mb-6">
+            <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-4 leading-[1.1] tracking-tight">
               <span className="text-white block mb-1">Hernandez</span>
-              <span className="text-gold bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent block pb-2 md:pb-3 leading-tight">Design & Build</span>
+              <span className="text-gold bg-gradient-to-r from-gold to-yellow-500 bg-clip-text text-transparent block pb-2 md:pb-3 leading-tight">Design & Build</span>
             </h1>
           </div>
           
           {/* Description */}
-          <div className="mb-3 md:mb-4 max-w-3xl">
+          <div className="mb-5 md:mb-7 max-w-3xl">
             <p className="text-base sm:text-lg md:text-lg text-white/95 mb-2 md:mb-3 leading-relaxed">
               Transform your home into your 
               <span className="text-gold font-semibold"> dream space</span> with 
@@ -31,7 +32,7 @@ const Hero = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="mb-2 md:mb-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 md:gap-3">
+          <div className="mb-4 md:mb-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 md:gap-3">
             <Button variant="hero" size="lg" className="group text-sm md:text-base px-5 md:px-6 py-2.5 md:py-3 w-full sm:w-auto" asChild>
               <a href="https://forms.gle/SqdUo792PQ7G2Qpu7" target="_blank" rel="noopener noreferrer">
                 Get Free Quote
@@ -39,10 +40,10 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="outline" size="lg" className="group text-sm md:text-base px-5 md:px-6 py-2.5 md:py-3 w-full sm:w-auto bg-white text-primary border-white hover:bg-white/90 font-semibold" asChild>
-              <a href="/booking">
+              <Link to="/booking">
                 Schedule Cleaning
                 <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
             <p className="text-sm md:text-base text-gold font-medium text-center sm:text-left">¡Hablamos Español!</p>
           </div>

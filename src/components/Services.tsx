@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Home, Wrench, TreePine, Hammer, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
@@ -30,7 +31,7 @@ const Services = () => {
         <div className="text-center mb-10 md:mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-5 lg:mb-6 tracking-tight leading-relaxed">
             <span className="text-primary">Our</span> 
-            <span className="text-gold bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent"> Services</span>
+            <span className="text-gold bg-gradient-to-r from-gold to-yellow-500 bg-clip-text text-transparent"> Services</span>
           </h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-base sm:text-lg md:text-lg lg:text-xl text-foreground leading-relaxed animate-fade-in [animation-delay:200ms]">
@@ -77,9 +78,9 @@ const Services = () => {
             </a>
           </Button>
           <Button size="default" className="text-xs lg:text-base px-4 py-2 group bg-primary hover:bg-primary/90 text-white" asChild>
-            <a href="https://hernandez-checkout.lovable.app" target="_blank" rel="noopener noreferrer">
+            <Link to="/booking">
               Schedule a Cleaning
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
